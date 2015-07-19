@@ -1,4 +1,9 @@
-# Reproducible Research: Peer Assessment 1
+---
+title: "Reproducible Research: Peer Assessment 1"
+output: 
+  html_document:
+    keep_md: true
+---
 
 
 ## Loading and preprocessing the data
@@ -31,7 +36,7 @@ hist(totalStepsByDay$totalSteps, main = "Total steps per day", col = "blue",
      xlab = "Total number of steps per day", breaks=length(totalStepsByDay$date))
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-3-1.png) 
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-1.png) 
 
 **Calculate the mean and median of the total number of steps taken per day**
 
@@ -54,7 +59,7 @@ plot(averageStepsByInterval$interval, averageStepsByInterval$steps,
      xlab='interval', ylab='Average number of steps taken', type='l')
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-5-1.png) 
+![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5-1.png) 
 
 **Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?**
 
@@ -118,7 +123,7 @@ hist(filledNaData.totalStepsByDay$totalSteps, main = "Total steps per day - Impu
      breaks=length(filledNaData.totalStepsByDay$date))
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-10-1.png) 
+![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10-1.png) 
 
 ```r
 # calculate mean and median
@@ -153,4 +158,4 @@ ggplot(weekday.weekends.averages, aes(interval, steps)) + geom_line() +
     facet_grid(dayType ~ .) + xlab("interval") + ylab("Average number of steps taken")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-12-1.png) 
+![plot of chunk unnamed-chunk-12](figure/unnamed-chunk-12-1.png) 
